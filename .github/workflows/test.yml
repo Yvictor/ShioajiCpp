@@ -23,7 +23,7 @@ jobs:
         with:
           submodules: 'recursive'
       - name: cmake
-        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=TRUE -DBUILD_SHARED_LIBS=TRUE -G "${{matrix.generator}}"
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -G "${{matrix.generator}}"
       - name: build
         run: cmake --build build --target Tests_run --parallel 10
       - name: test
