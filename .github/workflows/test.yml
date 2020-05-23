@@ -1,0 +1,17 @@
+name: test
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
+      - name: cmake
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles"
+      - name: build
+        run: cmake --build build --target Tests_run -- -j 8
+      - name: test
+        run: cd build; tests/Tests_run --gtest_filter=*
