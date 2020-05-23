@@ -4,14 +4,27 @@ on: push
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        include:
+          - os: ubuntu-latest
+            generator: CodeBlocks - Unix Makefiles
+            test_excutor: tests/Tests_run
+          - os: macos-latest
+            generator: CodeBlocks - Unix Makefiles
+            test_excutor: tests/Tests_run
+          - os: windows-latest
+            generator: Visual Studio 16 2019
+            test_excutor: tests/Debug/Tests_run.exe
     steps:
       - uses: actions/checkout@v2
         with:
           submodules: 'recursive'
       - name: cmake
-        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles"
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=TRUE -DBUILD_SHARED_LIBS=TRUE -G "${{matrix.generator}}"
       - name: build
-        run: cmake --build build --target Tests_run -- -j 8
+        run: cmake --build build --target Tests_run --parallel 10
       - name: test
-        run: cd build; tests/Tests_run --gtest_filter=*
+        run: cd build; ${{matrix.test_excutor}} --gtest_filter=*
