@@ -1,0 +1,6 @@
+#ifndef SHIOAJICPP_LIBRARY_H
+#define SHIOAJICPP_LIBRARY_H
+
+int hello();
+
+#endif //SHIOAJICPP_LIBRARY_H
