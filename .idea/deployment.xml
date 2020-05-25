@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="Remote Host (424a6f14-59e1-4bef-b863-c6509c476c33)" exclude=".svn;.DS_Store;.git;*.pyc">
+    <serverData>
+      <paths name="Remote Host (424a6f14-59e1-4bef-b863-c6509c476c33)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/tmp.OodDF80FYJ" local="$PROJECT_DIR$" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

@@ -11,8 +11,10 @@ project(${CMAKE_PROJECT_NAME}_tests)
 add_subdirectory(lib/googletest)
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 include_directories(../src/core)
+set(SOLCLIENT_INCLUDE_PATH ${CMAKE_SOURCE_DIR}/libs/solace/solclient_Linux26-x86_64_opt_7.13.0.4/solclient-7.13.0.4/include)
+include_directories(${SOLCLIENT_INCLUDE_PATH})
 
-add_executable(Tests_run test_sol.cpp)
+add_executable(Tests_run test_sol.cpp test_solmsg.cpp)
 target_link_libraries(Tests_run gtest gtest_main)
 target_link_libraries(Tests_run ${CMAKE_PROJECT_NAME})
 
