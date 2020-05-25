@@ -1,0 +1,726 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		43D5EE741BECF98B008E627A /* AllIntro */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 43D5EE751BECF98B008E627A /* Build configuration list for PBXAggregateTarget "AllIntro" */;
+			buildPhases = (
+			);
+			dependencies = (
+				43D5EE791BECF99A008E627A /* PBXTargetDependency */,
+				43D5EE7B1BECF99A008E627A /* PBXTargetDependency */,
+				43D5EE7D1BECF99A008E627A /* PBXTargetDependency */,
+				43D5EE7F1BECF99A008E627A /* PBXTargetDependency */,
+				43D5EE811BECF99A008E627A /* PBXTargetDependency */,
+				43D5EE831BECF99A008E627A /* PBXTargetDependency */,
+			);
+			name = AllIntro;
+			productName = AllIntro;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		433239411BEBF4DA00E2ED66 /* HelloWorldPub.c in Sources */ = {isa = PBXBuildFile; fileRef = 433239391BEBF4DA00E2ED66 /* HelloWorldPub.c */; };
+		4332394F1BEBF67100E2ED66 /* libsolclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332394E1BEBF67100E2ED66 /* libsolclient.a */; };
+		433239601BEBFB1B00E2ED66 /* libsolclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332394E1BEBF67100E2ED66 /* libsolclient.a */; };
+		433239661BEBFB4900E2ED66 /* HelloWorldSub.c in Sources */ = {isa = PBXBuildFile; fileRef = 4332393C1BEBF4DA00E2ED66 /* HelloWorldSub.c */; };
+		43D5EE3A1BECF61B008E627A /* libsolclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332394E1BEBF67100E2ED66 /* libsolclient.a */; };
+		43D5EE401BECF70E008E627A /* HelloWorldQueueSub.c in Sources */ = {isa = PBXBuildFile; fileRef = 4332393B1BEBF4DA00E2ED66 /* HelloWorldQueueSub.c */; };
+		43D5EE461BECF764008E627A /* libsolclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332394E1BEBF67100E2ED66 /* libsolclient.a */; };
+		43D5EE4C1BECF78B008E627A /* HelloWorldQueuePub.c in Sources */ = {isa = PBXBuildFile; fileRef = 4332393A1BEBF4DA00E2ED66 /* HelloWorldQueuePub.c */; };
+		43D5EE521BECF7E6008E627A /* libsolclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332394E1BEBF67100E2ED66 /* libsolclient.a */; };
+		43D5EE581BECF801008E627A /* HelloWorldWebPub.c in Sources */ = {isa = PBXBuildFile; fileRef = 4332393D1BEBF4DA00E2ED66 /* HelloWorldWebPub.c */; };
+		43D5EE5B1BECF82C008E627A /* HelloWorldQueueSub.c in Sources */ = {isa = PBXBuildFile; fileRef = 4332393B1BEBF4DA00E2ED66 /* HelloWorldQueueSub.c */; };
+		43D5EE5E1BECF82C008E627A /* libsolclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332394E1BEBF67100E2ED66 /* libsolclient.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43D5EE781BECF99A008E627A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 433239241BEBF42B00E2ED66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4332392B1BEBF42B00E2ED66;
+			remoteInfo = HelloWorldPub;
+		};
+		43D5EE7A1BECF99A008E627A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 433239241BEBF42B00E2ED66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4332395B1BEBFB1B00E2ED66;
+			remoteInfo = HelloWorldSub;
+		};
+		43D5EE7C1BECF99A008E627A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 433239241BEBF42B00E2ED66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43D5EE351BECF61B008E627A;
+			remoteInfo = HelloWorldQueueSub;
+		};
+		43D5EE7E1BECF99A008E627A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 433239241BEBF42B00E2ED66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43D5EE411BECF764008E627A;
+			remoteInfo = HelloWorldQueuePub;
+		};
+		43D5EE801BECF99A008E627A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 433239241BEBF42B00E2ED66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43D5EE4D1BECF7E6008E627A;
+			remoteInfo = HelloWorldWebPub;
+		};
+		43D5EE821BECF99A008E627A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 433239241BEBF42B00E2ED66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43D5EE591BECF82C008E627A;
+			remoteInfo = HelloWorldWebSub;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4332392A1BEBF42B00E2ED66 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		433239611BEBFB1B00E2ED66 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		43D5EE3B1BECF61B008E627A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		43D5EE471BECF764008E627A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		43D5EE531BECF7E6008E627A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		43D5EE5F1BECF82C008E627A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4332392C1BEBF42B00E2ED66 /* HelloWorldPub */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorldPub; sourceTree = BUILT_PRODUCTS_DIR; };
+		433239391BEBF4DA00E2ED66 /* HelloWorldPub.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HelloWorldPub.c; sourceTree = "<group>"; };
+		4332393A1BEBF4DA00E2ED66 /* HelloWorldQueuePub.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HelloWorldQueuePub.c; sourceTree = "<group>"; };
+		4332393B1BEBF4DA00E2ED66 /* HelloWorldQueueSub.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HelloWorldQueueSub.c; sourceTree = "<group>"; };
+		4332393C1BEBF4DA00E2ED66 /* HelloWorldSub.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HelloWorldSub.c; sourceTree = "<group>"; };
+		4332393D1BEBF4DA00E2ED66 /* HelloWorldWebPub.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HelloWorldWebPub.c; sourceTree = "<group>"; };
+		4332393E1BEBF4DA00E2ED66 /* HelloWorldWebSub.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HelloWorldWebSub.c; sourceTree = "<group>"; };
+		433239401BEBF4DA00E2ED66 /* os.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = os.h; sourceTree = "<group>"; };
+		4332394E1BEBF67100E2ED66 /* libsolclient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsolclient.a; path = "../obj_Darwin13-x86_64_debug/lib/libsolclient.a"; sourceTree = "<group>"; };
+		433239651BEBFB1B00E2ED66 /* HelloWorldSub */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorldSub; sourceTree = BUILT_PRODUCTS_DIR; };
+		43D5EE3F1BECF61B008E627A /* HelloWorldQueueSub */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorldQueueSub; sourceTree = BUILT_PRODUCTS_DIR; };
+		43D5EE4B1BECF764008E627A /* HelloWorldQueuePub */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorldQueuePub; sourceTree = BUILT_PRODUCTS_DIR; };
+		43D5EE571BECF7E6008E627A /* HelloWorldWebPub */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorldWebPub; sourceTree = BUILT_PRODUCTS_DIR; };
+		43D5EE631BECF82C008E627A /* HelloWorldWebSub */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorldWebSub; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		433239291BEBF42B00E2ED66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4332394F1BEBF67100E2ED66 /* libsolclient.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4332395F1BEBFB1B00E2ED66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				433239601BEBFB1B00E2ED66 /* libsolclient.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D5EE391BECF61B008E627A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D5EE3A1BECF61B008E627A /* libsolclient.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D5EE451BECF764008E627A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D5EE461BECF764008E627A /* libsolclient.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D5EE511BECF7E6008E627A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D5EE521BECF7E6008E627A /* libsolclient.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D5EE5D1BECF82C008E627A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D5EE5E1BECF82C008E627A /* libsolclient.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		433239231BEBF42B00E2ED66 = {
+			isa = PBXGroup;
+			children = (
+				4332394E1BEBF67100E2ED66 /* libsolclient.a */,
+				433239391BEBF4DA00E2ED66 /* HelloWorldPub.c */,
+				4332393A1BEBF4DA00E2ED66 /* HelloWorldQueuePub.c */,
+				4332393B1BEBF4DA00E2ED66 /* HelloWorldQueueSub.c */,
+				4332393C1BEBF4DA00E2ED66 /* HelloWorldSub.c */,
+				4332393D1BEBF4DA00E2ED66 /* HelloWorldWebPub.c */,
+				4332393E1BEBF4DA00E2ED66 /* HelloWorldWebSub.c */,
+				433239401BEBF4DA00E2ED66 /* os.h */,
+				4332392D1BEBF42B00E2ED66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4332392D1BEBF42B00E2ED66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4332392C1BEBF42B00E2ED66 /* HelloWorldPub */,
+				433239651BEBFB1B00E2ED66 /* HelloWorldSub */,
+				43D5EE3F1BECF61B008E627A /* HelloWorldQueueSub */,
+				43D5EE4B1BECF764008E627A /* HelloWorldQueuePub */,
+				43D5EE571BECF7E6008E627A /* HelloWorldWebPub */,
+				43D5EE631BECF82C008E627A /* HelloWorldWebSub */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4332392B1BEBF42B00E2ED66 /* HelloWorldPub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 433239351BEBF42B00E2ED66 /* Build configuration list for PBXNativeTarget "HelloWorldPub" */;
+			buildPhases = (
+				433239281BEBF42B00E2ED66 /* Sources */,
+				433239291BEBF42B00E2ED66 /* Frameworks */,
+				4332392A1BEBF42B00E2ED66 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloWorldPub;
+			productName = Intro;
+			productReference = 4332392C1BEBF42B00E2ED66 /* HelloWorldPub */;
+			productType = "com.apple.product-type.tool";
+		};
+		4332395B1BEBFB1B00E2ED66 /* HelloWorldSub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 433239621BEBFB1B00E2ED66 /* Build configuration list for PBXNativeTarget "HelloWorldSub" */;
+			buildPhases = (
+				4332395C1BEBFB1B00E2ED66 /* Sources */,
+				4332395F1BEBFB1B00E2ED66 /* Frameworks */,
+				433239611BEBFB1B00E2ED66 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloWorldSub;
+			productName = Intro;
+			productReference = 433239651BEBFB1B00E2ED66 /* HelloWorldSub */;
+			productType = "com.apple.product-type.tool";
+		};
+		43D5EE351BECF61B008E627A /* HelloWorldQueueSub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43D5EE3C1BECF61B008E627A /* Build configuration list for PBXNativeTarget "HelloWorldQueueSub" */;
+			buildPhases = (
+				43D5EE361BECF61B008E627A /* Sources */,
+				43D5EE391BECF61B008E627A /* Frameworks */,
+				43D5EE3B1BECF61B008E627A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloWorldQueueSub;
+			productName = Intro;
+			productReference = 43D5EE3F1BECF61B008E627A /* HelloWorldQueueSub */;
+			productType = "com.apple.product-type.tool";
+		};
+		43D5EE411BECF764008E627A /* HelloWorldQueuePub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43D5EE481BECF764008E627A /* Build configuration list for PBXNativeTarget "HelloWorldQueuePub" */;
+			buildPhases = (
+				43D5EE421BECF764008E627A /* Sources */,
+				43D5EE451BECF764008E627A /* Frameworks */,
+				43D5EE471BECF764008E627A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloWorldQueuePub;
+			productName = Intro;
+			productReference = 43D5EE4B1BECF764008E627A /* HelloWorldQueuePub */;
+			productType = "com.apple.product-type.tool";
+		};
+		43D5EE4D1BECF7E6008E627A /* HelloWorldWebPub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43D5EE541BECF7E6008E627A /* Build configuration list for PBXNativeTarget "HelloWorldWebPub" */;
+			buildPhases = (
+				43D5EE4E1BECF7E6008E627A /* Sources */,
+				43D5EE511BECF7E6008E627A /* Frameworks */,
+				43D5EE531BECF7E6008E627A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloWorldWebPub;
+			productName = Intro;
+			productReference = 43D5EE571BECF7E6008E627A /* HelloWorldWebPub */;
+			productType = "com.apple.product-type.tool";
+		};
+		43D5EE591BECF82C008E627A /* HelloWorldWebSub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43D5EE601BECF82C008E627A /* Build configuration list for PBXNativeTarget "HelloWorldWebSub" */;
+			buildPhases = (
+				43D5EE5A1BECF82C008E627A /* Sources */,
+				43D5EE5D1BECF82C008E627A /* Frameworks */,
+				43D5EE5F1BECF82C008E627A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloWorldWebSub;
+			productName = Intro;
+			productReference = 43D5EE631BECF82C008E627A /* HelloWorldWebSub */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		433239241BEBF42B00E2ED66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = ccsmp;
+			};
+			buildConfigurationList = 433239271BEBF42B00E2ED66 /* Build configuration list for PBXProject "Intro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 433239231BEBF42B00E2ED66;
+			productRefGroup = 4332392D1BEBF42B00E2ED66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4332392B1BEBF42B00E2ED66 /* HelloWorldPub */,
+				4332395B1BEBFB1B00E2ED66 /* HelloWorldSub */,
+				43D5EE351BECF61B008E627A /* HelloWorldQueueSub */,
+				43D5EE411BECF764008E627A /* HelloWorldQueuePub */,
+				43D5EE4D1BECF7E6008E627A /* HelloWorldWebPub */,
+				43D5EE591BECF82C008E627A /* HelloWorldWebSub */,
+				43D5EE741BECF98B008E627A /* AllIntro */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		433239281BEBF42B00E2ED66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				433239411BEBF4DA00E2ED66 /* HelloWorldPub.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4332395C1BEBFB1B00E2ED66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				433239661BEBFB4900E2ED66 /* HelloWorldSub.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D5EE361BECF61B008E627A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D5EE401BECF70E008E627A /* HelloWorldQueueSub.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D5EE421BECF764008E627A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D5EE4C1BECF78B008E627A /* HelloWorldQueuePub.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D5EE4E1BECF7E6008E627A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D5EE581BECF801008E627A /* HelloWorldWebPub.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D5EE5A1BECF82C008E627A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D5EE5B1BECF82C008E627A /* HelloWorldQueueSub.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43D5EE791BECF99A008E627A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4332392B1BEBF42B00E2ED66 /* HelloWorldPub */;
+			targetProxy = 43D5EE781BECF99A008E627A /* PBXContainerItemProxy */;
+		};
+		43D5EE7B1BECF99A008E627A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4332395B1BEBFB1B00E2ED66 /* HelloWorldSub */;
+			targetProxy = 43D5EE7A1BECF99A008E627A /* PBXContainerItemProxy */;
+		};
+		43D5EE7D1BECF99A008E627A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43D5EE351BECF61B008E627A /* HelloWorldQueueSub */;
+			targetProxy = 43D5EE7C1BECF99A008E627A /* PBXContainerItemProxy */;
+		};
+		43D5EE7F1BECF99A008E627A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43D5EE411BECF764008E627A /* HelloWorldQueuePub */;
+			targetProxy = 43D5EE7E1BECF99A008E627A /* PBXContainerItemProxy */;
+		};
+		43D5EE811BECF99A008E627A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43D5EE4D1BECF7E6008E627A /* HelloWorldWebPub */;
+			targetProxy = 43D5EE801BECF99A008E627A /* PBXContainerItemProxy */;
+		};
+		43D5EE831BECF99A008E627A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43D5EE591BECF82C008E627A /* HelloWorldWebSub */;
+			targetProxy = 43D5EE821BECF99A008E627A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		433239331BEBF42B00E2ED66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../lib\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "../../**";
+			};
+			name = Debug;
+		};
+		433239341BEBF42B00E2ED66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../lib\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "../../**";
+			};
+			name = Release;
+		};
+		433239361BEBF42B00E2ED66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		433239371BEBF42B00E2ED66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		433239631BEBFB1B00E2ED66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = HelloWorldSub;
+			};
+			name = Debug;
+		};
+		433239641BEBFB1B00E2ED66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = HelloWorldSub;
+			};
+			name = Release;
+		};
+		43D5EE3D1BECF61B008E627A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = HelloWorldQueueSub;
+			};
+			name = Debug;
+		};
+		43D5EE3E1BECF61B008E627A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = HelloWorldQueueSub;
+			};
+			name = Release;
+		};
+		43D5EE491BECF764008E627A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = HelloWorldQueuePub;
+			};
+			name = Debug;
+		};
+		43D5EE4A1BECF764008E627A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = HelloWorldQueuePub;
+			};
+			name = Release;
+		};
+		43D5EE551BECF7E6008E627A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = HelloWorldWebPub;
+			};
+			name = Debug;
+		};
+		43D5EE561BECF7E6008E627A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = HelloWorldWebPub;
+			};
+			name = Release;
+		};
+		43D5EE611BECF82C008E627A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = HelloWorldWebSub;
+			};
+			name = Debug;
+		};
+		43D5EE621BECF82C008E627A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = HelloWorldWebSub;
+			};
+			name = Release;
+		};
+		43D5EE761BECF98B008E627A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		43D5EE771BECF98B008E627A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		433239271BEBF42B00E2ED66 /* Build configuration list for PBXProject "Intro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				433239331BEBF42B00E2ED66 /* Debug */,
+				433239341BEBF42B00E2ED66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		433239351BEBF42B00E2ED66 /* Build configuration list for PBXNativeTarget "HelloWorldPub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				433239361BEBF42B00E2ED66 /* Debug */,
+				433239371BEBF42B00E2ED66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		433239621BEBFB1B00E2ED66 /* Build configuration list for PBXNativeTarget "HelloWorldSub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				433239631BEBFB1B00E2ED66 /* Debug */,
+				433239641BEBFB1B00E2ED66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43D5EE3C1BECF61B008E627A /* Build configuration list for PBXNativeTarget "HelloWorldQueueSub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43D5EE3D1BECF61B008E627A /* Debug */,
+				43D5EE3E1BECF61B008E627A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43D5EE481BECF764008E627A /* Build configuration list for PBXNativeTarget "HelloWorldQueuePub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43D5EE491BECF764008E627A /* Debug */,
+				43D5EE4A1BECF764008E627A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43D5EE541BECF7E6008E627A /* Build configuration list for PBXNativeTarget "HelloWorldWebPub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43D5EE551BECF7E6008E627A /* Debug */,
+				43D5EE561BECF7E6008E627A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43D5EE601BECF82C008E627A /* Build configuration list for PBXNativeTarget "HelloWorldWebSub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43D5EE611BECF82C008E627A /* Debug */,
+				43D5EE621BECF82C008E627A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43D5EE751BECF98B008E627A /* Build configuration list for PBXAggregateTarget "AllIntro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43D5EE761BECF98B008E627A /* Debug */,
+				43D5EE771BECF98B008E627A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 433239241BEBF42B00E2ED66 /* Project object */;
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>892A582D-D4BB-471A-A511-401ED5F66D4D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Intro</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>10E3F9D7-482F-465E-BD5B-19C6B22C6791</key>
+		<string>svn://sol-repo/svn/ccsmp/branches/7.1_branch</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Intro/Intro.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>10E3F9D7-482F-465E-BD5B-19C6B22C6791</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>10E3F9D7-482F-465E-BD5B-19C6B22C6791</key>
+		<string>svn://sol-repo/svn/ccsmp</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn://sol-repo/svn/ccsmp/branches/7.1_branch/Intro/Intro.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>10E3F9D7-482F-465E-BD5B-19C6B22C6791</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
+			<string>branches</string>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlRepositoryTagsRelativeLocationKey</key>
+			<string>tags</string>
+			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
+			<string>trunk</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>10E3F9D7-482F-465E-BD5B-19C6B22C6791</string>
+			<key>IDESourceControlWCCName</key>
+			<string>7.1_branch</string>
+		</dict>
+	</array>
+</dict>
+</plist>

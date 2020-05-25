@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<VisualStudioPropertySheet 
+	ProjectType="Visual C++" 
+	Version="8.00" 
+	Name="solclient"
+	>
+	<UserMacro
+		Name="SolclientDir"
+		Value="$(SolutionDir)..\.."
+	/>
+    <UserMacro
+	    Name="SolclientPostBuildCmd"
+		Value="xcopy /Y"
+    />
+    <UserMacro
+	    Name="SolclientMacros"
+		Value="SOLCLIENT_CONST_PROPERTIES"
+    />	
+</VisualStudioPropertySheet>

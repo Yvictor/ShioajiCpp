@@ -1,0 +1,33 @@
+libsolclient_dynamicJudy library
+
+The libsolclient_dynamicJudy library allows the freedom to use the Judy library of choice with the libsolclient library.
+However, Solace does not provide support under product maintenance plans for Judy versions other than the version tested with.
+
+Platform Specifics
+
+Windows
+The libsolclient_dynamicJudy.dll library will depend on the Judy.dll library.
+
+UNIX 
+The libsolclient_dynamicJudy.so library will depend on the libJudy.so library.
+If you wish to statically link with Judy, you can replace the version of Judy in the libsolclient.a archive with the one of
+your choice using the ar tool.
+
+Here are some useful commands to access or modify modules in the libsolcient.a archive.
+
+List archive modules : ar -t libsolclient.a
+
+Replace archive modules : ar -r libsolclient.a libjudy.o
+
+IOS 
+The solace api does not have a dynamic libary for this IOS platform so there is no libsoclient_dynamicJudy library.
+The libsolclient.a archive can replace judy modules using ar however there is an extra step to access the judy modules.
+The libsolclient.a archive is universal for ios architectures so the architecture specific archive must be extracted first.
+
+Here is a command to extract architecture specific archive from libsolclient.a:
+lipo libsolclient. a -thin armv6 -output libsolclient_armv6.a
+
+For ar commands see UNIX
+
+Here is a command to combine architecture specific archives into libsolclient.a:
+lipo libsolclient_<ARCH1> libsolclient_<ARCH2> ... libsolclient_<ARCHN> -create -output libsolclient.a

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>All Intro.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>AllIntro.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>HelloWorldPub copy 2.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>HelloWorldPub copy 4.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>HelloWorldPub copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>HelloWorldQueuePub copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>HelloWorldQueueSub copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>HelloWorldSub copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Intro.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>4332392B1BEBF42B00E2ED66</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>433239501BEBFAE000E2ED66</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4332395B1BEBFB1B00E2ED66</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>43D5EE351BECF61B008E627A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>43D5EE411BECF764008E627A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>43D5EE4D1BECF7E6008E627A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>43D5EE591BECF82C008E627A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>43D5EE641BECF8F5008E627A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>43D5EE741BECF98B008E627A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
