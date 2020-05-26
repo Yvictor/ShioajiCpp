@@ -16,6 +16,7 @@ if (DARWIN)
 elseif(LINUX)
     set(SOLCLIENT_LIB_PATH ${CMAKE_SOURCE_DIR}/libs/solace/Linux/solclient-${SOLCLIENT_VERSION}/lib)
     set(SOLCLIENT_LIB_NAME libsolclient.a)
+    set(LINK_LIBS rt)
 elseif(MSYS)
 endif()
 
@@ -25,4 +26,4 @@ set_property(TARGET solclient PROPERTY IMPORTED_LOCATION ${SOLCLIENT_LIB_PATH}/$
 set(HEADER_FILES core/sol.h core/libsolclient.h )
 set(SOURCE_FILES core/sol.cpp core/solmsg.cpp core/solmsg.h)
 add_library(ShioajiCpp STATIC ${SOURCE_FILES} ${HEADERS_FILES})
-target_link_libraries(ShioajiCpp solclient rt)
+target_link_libraries(ShioajiCpp solclient ${LINK_LIBS})
