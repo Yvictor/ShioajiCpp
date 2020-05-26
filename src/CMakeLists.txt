@@ -1,10 +1,24 @@
 project(${CMAKE_PROJECT_NAME}_lib)
 
-
-set(SOLCLIENT_INCLUDE_PATH ${CMAKE_SOURCE_DIR}/libs/solace/solclient_Linux26-x86_64_opt_7.13.0.4/solclient-7.13.0.4/include)
-set(SOLCLIENT_LIB_PATH ${CMAKE_SOURCE_DIR}/libs/solace/solclient_Linux26-x86_64_opt_7.13.0.4/solclient-7.13.0.4/lib)
-set(SOLCLIENT_LIB_NAME libsolclient.a)
+set(SOLCLIENT_VERSION 7.13.0.4)
+set(SOLCLIENT_INCLUDE_PATH ${CMAKE_SOURCE_DIR}/libs/solace/include/solclient-${SOLCLIENT_VERSION})
 include_directories(${SOLCLIENT_INCLUDE_PATH})
+
+if (UNIX AND NOT APPLE)
+    set(LINUX TRUE)
+elseif (UNIX AND APPLE)
+    set(DARWIN TRUE)
+endif()
+
+if (DARWIN)
+    set(SOLCLIENT_LIB_PATH ${CMAKE_SOURCE_DIR}/libs/solace/Darwin/solclient-${SOLCLIENT_VERSION}/lib)
+    set(SOLCLIENT_LIB_NAME libsolclient.a)
+elseif(LINUX)
+    set(SOLCLIENT_LIB_PATH ${CMAKE_SOURCE_DIR}/libs/solace/Linux/solclient-${SOLCLIENT_VERSION}/lib)
+    set(SOLCLIENT_LIB_NAME libsolclient.a)
+elseif(MSYS)
+endif()
+
 add_library(solclient STATIC IMPORTED)
 set_property(TARGET solclient PROPERTY IMPORTED_LOCATION ${SOLCLIENT_LIB_PATH}/${SOLCLIENT_LIB_NAME})
 
