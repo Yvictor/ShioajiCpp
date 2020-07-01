@@ -27,4 +27,4 @@ jobs:
       - name: build
         run: cmake --build build --target --parallel 10
       - name: test
-        run: cd build; ${{matrix.test_excutor}} --gtest_filter=*
+        run: cd build; ${{matrix.test_excutor}} -V
