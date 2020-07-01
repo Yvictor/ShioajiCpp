@@ -12,12 +12,12 @@ jobs:
           - os: ubuntu-latest
             generator: CodeBlocks - Unix Makefiles
             test_excutor: ctest
-          - os: macos-latest
-            generator: CodeBlocks - Unix Makefiles
-            test_excutor: ctest
-          - os: windows-latest
-            generator: Visual Studio 16 2019
-            test_excutor: ctest
+#          - os: macos-latest
+#            generator: CodeBlocks - Unix Makefiles
+#            test_excutor: ctest
+#          - os: windows-latest
+#            generator: Visual Studio 16 2019
+#            test_excutor: ctest
     steps:
       - uses: actions/checkout@v2
         with:
