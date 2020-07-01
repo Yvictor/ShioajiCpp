@@ -10,13 +10,14 @@ project(${CMAKE_PROJECT_NAME}_tests)
 
 add_subdirectory(lib/googletest)
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
-include_directories(../src/core)
+include_directories(../include)
 
-set(SOLCLIENT_VERSION 7.13.0.4)
-set(SOLCLIENT_INCLUDE_PATH ${CMAKE_SOURCE_DIR}/libs/solace/include/solclient-${SOLCLIENT_VERSION})
-include_directories(${SOLCLIENT_INCLUDE_PATH})
 
-add_executable(Tests_run test_sol.cpp test_solmsg.cpp)
-target_link_libraries(Tests_run gtest gtest_main)
-target_link_libraries(Tests_run ${CMAKE_PROJECT_NAME})
+add_executable(TestShioaji test_shioaji.cpp)
+target_link_libraries(TestShioaji gtest gtest_main)
+target_link_libraries(TestShioaji ${CMAKE_PROJECT_NAME})
 
+add_test(NAME TestShioaji
+        COMMAND TestShioaji)
+
+add_subdirectory(test_core)

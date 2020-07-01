@@ -11,13 +11,13 @@ jobs:
         include:
           - os: ubuntu-latest
             generator: CodeBlocks - Unix Makefiles
-            test_excutor: tests/Tests_run
+            test_excutor: ctest
           - os: macos-latest
             generator: CodeBlocks - Unix Makefiles
-            test_excutor: tests/Tests_run
+            test_excutor: ctest
           - os: windows-latest
             generator: Visual Studio 16 2019
-            test_excutor: tests/Debug/Tests_run.exe
+            test_excutor: ctest
     steps:
       - uses: actions/checkout@v2
         with:
@@ -25,6 +25,6 @@ jobs:
       - name: cmake
         run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -G "${{matrix.generator}}"
       - name: build
-        run: cmake --build build --target Tests_run --parallel 10
+        run: cmake --build build --target --parallel 10
       - name: test
         run: cd build; ${{matrix.test_excutor}} --gtest_filter=*
