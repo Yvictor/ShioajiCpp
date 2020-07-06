@@ -4,6 +4,17 @@ project(ShioajiCpp VERSION 0.1.0)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS 1)
 
+if (UNIX AND NOT APPLE)
+    set(LINUX TRUE)
+elseif (UNIX AND APPLE)
+    set(DARWIN TRUE)
+endif()
+
+if (DARWIN)
+set(ENV{SDKROOT} $(xcodebuild -version -sdk macosx Path))
+endif()
+
+
 if(NOT EXISTS "${CMAKE_BINARY_DIR}/conan.cmake")
     message(STATUS "Downloading conan.cmake from https://github.com/conan-io/cmake-conan")
     file(DOWNLOAD "https://github.com/conan-io/cmake-conan/raw/v0.15/conan.cmake"
@@ -12,11 +23,6 @@ endif()
 set(CONAN_CMD conan)
 include(${CMAKE_BINARY_DIR}/conan.cmake)
 
-if (UNIX AND NOT APPLE)
-    set(LINUX TRUE)
-elseif (UNIX AND APPLE)
-    set(DARWIN TRUE)
-endif()
 
 set(SOLCLIENT_VERSION 7.13.0.4)
 if (DARWIN)
