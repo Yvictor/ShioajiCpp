@@ -28,7 +28,9 @@ jobs:
           python-version: 3.6
           architecture: x64
       - name: Setup conan
-        run: pip install --user conan
+        run: | 
+          echo "::add-path::/home/runner/.local/bin"
+          pip install --user conan
       - name: cmake
         run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -G "${{matrix.generator}}"
       - name: build
