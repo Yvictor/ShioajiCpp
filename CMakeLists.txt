@@ -46,8 +46,8 @@ include_directories(${SOLCLIENT_INCLUDE_PATH})
 include_directories(src)
 include_directories(include)
 
-set(HEADER_FILES src/core/libsolclient.h src/core/sol.h src/core/solmsg.h src/shioaji_impl.h include/shioaji.h)
-set(SOURCE_FILES src/core/sol.cpp src/core/solmsg.cpp src/shioaji_impl.cpp)
+set(HEADER_FILES src/core/libsolclient.h src/core/sol.h src/core/solmsg.h src/shioaji_impl.h src/core/session.h include/shioaji.h)
+set(SOURCE_FILES src/core/sol.cpp src/core/solmsg.cpp src/shioaji_impl.cpp src/core/session.cpp)
 add_library(ShioajiCpp SHARED ${SOURCE_FILES} ${HEADERS_FILES})
 target_link_libraries(ShioajiCpp solclient ${LINK_LIBS})
 

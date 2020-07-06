@@ -1,7 +1,3 @@
-//
-// Created by 011295 on 2020/6/17.
-//
-
 #include <string>
 #ifndef SHIOAJICPP_INCLUDE_SHIOAJI_H_
 #define SHIOAJICPP_INCLUDE_SHIOAJI_H_

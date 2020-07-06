@@ -5,8 +5,6 @@
 #include "shioaji_impl.h"
 
 namespace shioaji {
-Session::Session() {}
-Session::~Session() {}
 
 Shioaji::Shioaji() : sess(new Session()) {
 
