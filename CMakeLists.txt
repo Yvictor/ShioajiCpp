@@ -9,7 +9,7 @@ if(NOT EXISTS "${CMAKE_BINARY_DIR}/conan.cmake")
     file(DOWNLOAD "https://github.com/conan-io/cmake-conan/raw/v0.15/conan.cmake"
             "${CMAKE_BINARY_DIR}/conan.cmake")
 endif()
-set(CONAN_COMMAND ~/.local/bin/conan)
+set(CONAN_CMD conan)
 include(${CMAKE_BINARY_DIR}/conan.cmake)
 
 if (UNIX AND NOT APPLE)
