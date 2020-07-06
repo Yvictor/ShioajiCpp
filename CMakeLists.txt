@@ -17,7 +17,11 @@ endif()
 
 if(NOT EXISTS "${CMAKE_BINARY_DIR}/conan.cmake")
     message(STATUS "Downloading conan.cmake from https://github.com/conan-io/cmake-conan")
-    file(DOWNLOAD "https://github.com/conan-io/cmake-conan/raw/v0.13/conan.cmake"
+    set(CONAN_VERSION 0.15)
+    if (DARWIN)
+        set(CONAN_VERSION 0.13)
+    endif()
+    file(DOWNLOAD "https://github.com/conan-io/cmake-conan/raw/v${CONAN_VERSION}/conan.cmake"
             "${CMAKE_BINARY_DIR}/conan.cmake")
 endif()
 set(CONAN_CMD conan)
