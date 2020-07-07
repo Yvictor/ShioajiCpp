@@ -31,8 +31,12 @@ jobs:
           python-version: 3.6
           architecture: x64
       - name: Setup conan
-        run: | 
+        run: |
+          echo ${PATH}
+          echo ${LD_LIBRARY_PATH}
           echo "::add-path::${{matrix.conan_bin_path}}"
+          echo ${PATH}
+          echo ${LD_LIBRARY_PATH}
           pip install --user conan
       - name: cmake
         run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -G "${{matrix.generator}}"
