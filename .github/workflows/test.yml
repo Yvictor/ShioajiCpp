@@ -12,12 +12,15 @@ jobs:
           - os: ubuntu-latest
             generator: CodeBlocks - Unix Makefiles
             test_excutor: ctest
+            conan_bin_path: /home/runner/.local/bin
           - os: macos-latest
             generator: CodeBlocks - Unix Makefiles
             test_excutor: ctest
+            conan_bin_path: /Users/runner/.local/bin
           - os: windows-latest
             generator: Visual Studio 16 2019
             test_excutor: ctest -C Debug
+            conan_bin_path: /home/runner/.local/bin
     steps:
       - uses: actions/checkout@v2
         with:
@@ -29,8 +32,9 @@ jobs:
           architecture: x64
       - name: Setup conan
         run: | 
-          echo "::add-path::~/.local/bin"
+          echo "::add-path::${{matrix.conan_bin_path}}"
           pip install --user conan
+          which conan
       - name: cmake
         run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -G "${{matrix.generator}}"
       - name: build
