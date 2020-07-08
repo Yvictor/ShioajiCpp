@@ -95,5 +95,12 @@ if(MSVC)
 #    install(TARGETS ShioajiCpp RUNTIME DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/tests/${CMAKE_BUILD_TYPE}")
 #    install(TARGETS ShioajiCpp RUNTIME DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/tests/test_core/${CMAKE_BUILD_TYPE}")
 #    file(COPY ${CMAKE_CURRENT_BINARY_DIR}/libShioajiCpp.dll DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/tests)
+elseif(DARWIN)
+    add_custom_command(
+            TARGET ShioajiCpp POST_BUILD
+            COMMAND ${CMAKE_INSTALL_NAME_TOOL} -id
+            "@loader_path/../lib/$<TARGET_FILE_NAME:ShioajiCpp>"
+            $<TARGET_FILE:ShioajiCpp>
+    )
 endif()
 
