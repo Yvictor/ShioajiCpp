@@ -1,0 +1,4 @@
+--triplet
+x64-linux
+spdlog
+nlohmann-json

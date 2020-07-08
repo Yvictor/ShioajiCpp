@@ -3,44 +3,62 @@ name: test
 on: push
 
 jobs:
-  test:
+  Build:
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
+      max-parallel: 8
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
+        buildtype: [Debug]
         include:
           - os: ubuntu-latest
             generator: CodeBlocks - Unix Makefiles
             test_excutor: ctest
+            triplet: x64-linux
             conan_bin_path: /home/runner/.local/bin
           - os: macos-latest
             generator: CodeBlocks - Unix Makefiles
             test_excutor: ctest
+            triplet: x64-osx
             conan_bin_path: /Users/runner/.local/bin
           - os: windows-latest
             generator: Visual Studio 16 2019
             test_excutor: ctest -C Debug
+            triplet: x64-windows
             conan_bin_path: /home/runner/.local/bin
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
         with:
           submodules: 'recursive'
-      - name: Setup python
-        uses: actions/setup-python@v2
+
+      - uses: lukka/get-cmake@latest
+
+      - name: Run vcpkg - with cache
+        env:
+          VCPKGRESPONSEFILE: ${{github.workspace}}/cmakeliststxt/vcpkg_${{matrix.triplet}}.txt
+        uses: lukka/run-vcpkg@add_triplet_to_cachekey
         with:
-          python-version: 3.6
-          architecture: x64
-      - name: Setup conan
-        run: |
-          echo ${PATH}
-          echo ${LD_LIBRARY_PATH}
-          echo "::add-path::${{matrix.conan_bin_path}}"
-          echo ${PATH}
-          echo ${LD_LIBRARY_PATH}
-          pip install --user conan
-      - name: cmake
-        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -G "${{matrix.generator}}"
-      - name: build
-        run: cmake --build build --target --parallel 10
-      - name: test
-        run: cd build; ${{matrix.test_excutor}} -V
+          vcpkgArguments: '@${{env.VCPKGRESPONSEFILE}}'
+          vcpkgDirectory: ${{ github.workspace }}/vcpkg/
+          appendedCacheKey: ${{ hashFiles( env.VCPKGRESPONSEFILE ) }}
+
+      - name: Build with CMake
+        uses: lukka/run-cmake@v2
+        id: runcmake
+        with:
+          cmakeListsTxtPath: '${{ github.workspace }}/CMakeLists.txt'
+          useVcpkgToolchainFile: true
+          cmakeBuildType: ${{ matrix.buildtype }}
+          buildDirectory: '${{ github.workspace }}/build'
+          buildWithCMakeArgs: '-- -v'
+
+      - name: Prints output of run-vcpkg's task
+        run: echo "root='${{ steps.runcmake.outputs.RUNVCPKG_VCPKG_ROOT_OUT }}', triplet='${{ steps.runcmake.outputs.RUNVCPKG_VCPKG_TRIPLET_OUT }}' "
+      #- name: cmake
+      #  run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -G "${{matrix.generator}}"
+      #- name: build
+      #  run: cmake --build build --target --parallel 10
+      - name: Test
+      #  run: cmd -r dir /s /b
+        run: cd build && ${{matrix.test_excutor}} -V
