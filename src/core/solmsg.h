@@ -6,6 +6,9 @@
 #define SHIOAJICPP_SRC_CORE_SOLMSG_H_
 
 #include "libsolclient.h"
+#include <nlohmann/json.hpp>
+
+using json = nlohmann::json;
 
 class SolMsg {
  private:

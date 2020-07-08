@@ -64,9 +64,10 @@ include_directories(${SOLCLIENT_INCLUDE_PATH})
 include_directories(src)
 include_directories(include)
 
-conan_cmake_run(REQUIRES spdlog/1.6.1
-                BASIC_SETUP
-                BUILD missing
+conan_cmake_run(REQUIRES
+            spdlog/1.6.1
+            nlohmann_json/3.8.0
+            BASIC_SETUP BUILD missing
 )
 
 set(HEADER_FILES src/core/libsolclient.h src/core/sol.h src/core/solmsg.h src/shioaji_impl.h src/core/session.h include/shioaji.h)
@@ -77,24 +78,18 @@ target_link_libraries(ShioajiCpp solclient ${LINK_LIBS} ${CONAN_LIBS})
 enable_testing()
 add_subdirectory(tests)
 if(MSVC)
-    if(NOT CMAKE_BUILD_TYPE)
-        set(CMAKE_BUILD_TYPE Debug)
-    endif()
     add_custom_command(
         TARGET ShioajiCpp POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy
-        ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_BUILD_TYPE}/ShioajiCpp.dll
+        $<TARGET_FILE:ShioajiCpp>
         ${CMAKE_CURRENT_BINARY_DIR}/tests
     )
     add_custom_command(
             TARGET ShioajiCpp POST_BUILD
             COMMAND ${CMAKE_COMMAND} -E copy
-            ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_BUILD_TYPE}/ShioajiCpp.dll
+            $<TARGET_FILE:ShioajiCpp>
             ${CMAKE_CURRENT_BINARY_DIR}/tests/test_core
     )
-#    install(TARGETS ShioajiCpp RUNTIME DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/tests/${CMAKE_BUILD_TYPE}")
-#    install(TARGETS ShioajiCpp RUNTIME DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/tests/test_core/${CMAKE_BUILD_TYPE}")
-#    file(COPY ${CMAKE_CURRENT_BINARY_DIR}/libShioajiCpp.dll DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/tests)
 elseif(DARWIN)
     add_custom_command(
             TARGET ShioajiCpp POST_BUILD
