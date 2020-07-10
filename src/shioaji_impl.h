@@ -3,7 +3,6 @@
 #include "core/session.h"
 
 namespace shioaji{
-
 }
 
 #endif //SHIOAJICPP_SRC_SHIOAJI_IMPL_H_

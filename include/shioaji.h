@@ -2,9 +2,17 @@
 #ifndef SHIOAJICPP_INCLUDE_SHIOAJI_H_
 #define SHIOAJICPP_INCLUDE_SHIOAJI_H_
 
-#endif //SHIOAJICPP_INCLUDE_SHIOAJI_H_
-
 namespace shioaji {
+namespace account {
+  enum AccountType {Stock, Futures, H, InValid};
+  struct Account {
+    AccountType account_type;
+    std::string person_id;
+    std::string broker_id;
+    std::string account_id;
+    bool _signed;
+  };
+}
   class Session;
   class Shioaji{
     private:
@@ -16,3 +24,4 @@ namespace shioaji {
 
  };
 }
+#endif //SHIOAJICPP_INCLUDE_SHIOAJI_H_

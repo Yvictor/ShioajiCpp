@@ -1,12 +1,14 @@
 //
 // Created by 011295 on 2020/6/17.
 //
-#include "shioaji.h"
 #include "shioaji_impl.h"
 
 namespace shioaji {
 
-Shioaji::Shioaji() : sess(new Session()) {
+Shioaji::Shioaji() : sess(new Session("203.66.91.161:80",
+                                      "sinopac",
+                                      "shioaji",
+                                      "sahjiio111")) {
 
 }
 

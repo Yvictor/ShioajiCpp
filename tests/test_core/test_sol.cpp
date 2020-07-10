@@ -4,6 +4,16 @@
 
 #include "gtest/gtest.h"
 #include "sol.h"
-TEST(Example, EQ) {
-	EXPECT_EQ(hello(), 0);
+
+ class CSolTest: public ::testing::Test{
+  protected:
+  void SetUp() override {
+
+  }
+  CSol sol;
+};
+
+TEST_F(CSolTest, Join){
+  sol.Join();
 }
+
