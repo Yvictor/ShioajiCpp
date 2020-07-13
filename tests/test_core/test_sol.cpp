@@ -13,7 +13,7 @@
   CSol sol;
 };
 
-TEST_F(CSolTest, Join){
-  sol.Join();
-}
+//TEST_F(CSolTest, Join){
+//  sol.Join();
+//}
 
