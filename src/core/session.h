@@ -4,7 +4,6 @@
 #include "sol.h"
 #include "shioaji.h"
 
-
 namespace shioaji {
 
 class Session {
@@ -18,8 +17,9 @@ class Session {
           const std::string &user,
           const std::string &password,
           const std::string &clientname = "");
+  Session(CSol sol);
   virtual ~Session();
-  bool Login(const std::string &person_id, const std::string &password);
+  std::vector<account::Account> Login(const std::string &person_id, const std::string &password);
 };
 
 }

@@ -1,6 +1,8 @@
 #include "session.h"
+#include "account.h"
 
 namespace shioaji {
+
 Session::Session(const std::string &host,
                  const std::string &vpn,
                  const std::string &user,
@@ -15,19 +17,34 @@ Session::Session(const std::string &host,
               clientname.c_str());
 }
 
+//Session::Session(CSol sol) : sol(std::move(sol)){
+//  spdlog::set_pattern("[%H:%M:%S.%f] [%i] [%@:%!] [%L] [thread %t] %v");
+//}
+
 Session::~Session() {}
 
 void Session::set_token(const std::string &token) {
   this->_token = token;
 }
 
-bool Session::Login(const std::string &person_id, const std::string &password) {
+std::vector<account::Account> Session::Login(const std::string &person_id,
+                                             const std::string &password) {
   json payload;
   payload["person_id"] = person_id;
   payload["password"] = password;
   SolMsg respMsg = sol.SendRequest("api/v1/auth/login", payload, 5000);
-  json body = respMsg.getJsonBody();
-  std::vector<shioaji::account::Account> accounts;
-  return false;
+  json body = respMsg.getMsgpackBody();
+  std::vector<account::Account> accounts;
+  if (body["status"]["status_code"].get<int>() == 200) {
+    set_token(body["response"]["token"]);
+    for (auto &element: body["response"]["accounts"]) {
+      account::Account account = element;
+      accounts.push_back(account);
+    }
+  } else {
+    spdlog::error(body.dump());
+  }
+  return accounts;
 }
+
 }

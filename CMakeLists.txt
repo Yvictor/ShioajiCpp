@@ -70,7 +70,7 @@ conan_cmake_run(REQUIRES
             BASIC_SETUP BUILD missing
 )
 
-set(HEADER_FILES src/core/libsolclient.h src/core/sol.h src/core/solmsg.h src/shioaji_impl.h src/core/session.h include/shioaji.h src/core/spdlevel.h)
+set(HEADER_FILES src/core/libsolclient.h src/core/sol.h src/core/solmsg.h src/shioaji_impl.h src/core/session.h include/shioaji.h src/core/spdlevel.h src/account.h)
 set(SOURCE_FILES src/core/sol.cpp src/core/solmsg.cpp src/shioaji_impl.cpp src/core/session.cpp)
 add_library(ShioajiCpp SHARED ${SOURCE_FILES} ${HEADERS_FILES})
 target_link_libraries(ShioajiCpp solclient ${LINK_LIBS} ${CONAN_LIBS})

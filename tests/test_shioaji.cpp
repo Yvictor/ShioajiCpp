@@ -5,15 +5,18 @@
 #include "gtest/gtest.h"
 #include "shioaji.h"
 
- class ShioajiTest: public ::testing::Test{
-  protected:
+namespace sj = shioaji;
+
+class ShioajiTest : public ::testing::Test {
+ protected:
   void SetUp() override {
 
   }
-  shioaji::Shioaji api;
+  sj::Shioaji api = sj::Shioaji(true);
 };
 
-TEST_F(ShioajiTest, login){
-  bool res = api.login("PERSON_ID", "PASSWORD");
-  EXPECT_EQ(res, true);
+TEST_F(ShioajiTest, login) {
+  std::vector<sj::account::Account>
+      res = api.login("PAPIUSER01", "2222");
+  EXPECT_NE(res.size(), 0);
 }
