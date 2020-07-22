@@ -14,6 +14,24 @@ struct Account {
   bool _signed;
 };
 }
+
+namespace contracts {
+enum SecurityType { Index, Stock, Futures, Options };
+enum Exchange { TSE, OTC, OES, TAIFEX };
+
+struct BaseContract {
+  SecurityType security_type;
+  Exchange exchange;
+  std::string code;
+};
+
+struct Stock : BaseContract {
+  SecurityType security_type = SecurityType::Stock;
+  // limit_up : float = 0.0 limit_down : float = 0.0 reference : float = 0.0
+};
+
+}  // namespace contracts
+
 class Session;
 class Shioaji {
  private:
@@ -23,6 +41,7 @@ class Shioaji {
   Shioaji(Session * session);
   virtual ~Shioaji();
   std::vector<account::Account> login(const std::string &person_id, const std::string &password);
+  std::vector<contracts::BaseContract> fetch_contracts();
 
 };
 }

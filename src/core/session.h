@@ -20,6 +20,7 @@ class Session {
   Session(CSol sol);
   virtual ~Session();
   std::vector<account::Account> Login(const std::string &person_id, const std::string &password);
+  std::vector<contracts::BaseContract> FetchStockContracts();
 };
 
 }

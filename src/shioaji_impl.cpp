@@ -27,5 +27,8 @@ std::vector<account::Account> Shioaji::login(const std::string &person_id,
                                              const std::string &password) {
   return sess->Login(person_id, password);
 }
+std::vector<contracts::BaseContract> Shioaji::fetch_contracts() {
+  return sess->FetchStockContracts();
+}
 
 }

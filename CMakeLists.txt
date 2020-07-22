@@ -69,10 +69,12 @@ conan_cmake_run(REQUIRES
             nlohmann_json/3.8.0
             BASIC_SETUP BUILD missing
 )
+file(GLOB PRIVATE_HEADERS src/*.h src/core/*.h)
+message(${PRIVATE_HEADERS})
 
-set(HEADER_FILES src/core/libsolclient.h src/core/sol.h src/core/solmsg.h src/shioaji_impl.h src/core/session.h include/shioaji.h src/core/spdlevel.h src/account.h)
+set(PUBLIC_HEADER include/shioaji.h)
 set(SOURCE_FILES src/core/sol.cpp src/core/solmsg.cpp src/shioaji_impl.cpp src/core/session.cpp)
-add_library(ShioajiCpp SHARED ${SOURCE_FILES} ${HEADERS_FILES})
+add_library(ShioajiCpp SHARED ${SOURCE_FILES} ${PUBLIC_HEADER} ${PRIVATE_HEADERS})
 target_link_libraries(ShioajiCpp solclient ${LINK_LIBS} ${CONAN_LIBS})
 
 enable_testing()

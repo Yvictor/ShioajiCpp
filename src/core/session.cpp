@@ -1,5 +1,6 @@
 #include "session.h"
 #include "account.h"
+#include "contracts.h"
 
 namespace shioaji {
 
@@ -45,6 +46,31 @@ std::vector<account::Account> Session::Login(const std::string &person_id,
     spdlog::error(body.dump());
   }
   return accounts;
+}
+
+std::vector<contracts::BaseContract> Session::FetchStockContracts() {
+  std::vector<contracts::BaseContract> cs;
+  json payload;
+  if (this->_token != "") {
+    payload["token"] = this->_token;
+    payload["security_type"] = contracts::SecurityType::Stock;
+    spdlog::info("downloading...");
+    SolMsg respMsg = sol.SendRequest("api/v1/data/contracts", payload, 30000);
+    json body = respMsg.getMsgpackBody();
+    spdlog::info("downloaded.");
+    if (body["status"]["status_code"].get<int>() == 200) {
+      for (auto &element: body["response"]["contracts"]) {
+        contracts::BaseContract contract = element;
+        cs.push_back(contract);
+      }
+      spdlog::info("parsed.");
+    } else {
+      spdlog::error(body.dump());
+    }
+  } else {
+    spdlog::error("Please login first.");
+  }
+  return cs;
 }
 
 }
